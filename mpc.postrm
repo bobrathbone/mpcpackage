@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+echo "Removing MPC"
+
+LOCALBIN=/usr/local/bin
+USRBIN=/usr/bin
+
+if [[ -f ${USRBIN}/mpc ]]; then
+    cmd="sudo rm ${USRBIN}/mpc"
+    echo ${cmd};${cmd}
+fi
+
+if [[ -f ${USRBIN}/mpc.old ]]; then
+    cmd="sudo mv ${USRBIN}/mpc.old  ${USRBIN}/mpc"
+    echo ${cmd};${cmd}
+fi

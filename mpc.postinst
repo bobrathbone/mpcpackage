@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+echo "Updating MPC configuration"
+
+LOCALBIN=/usr/local/bin
+USRBIN=/usr/bin
+
+if [[ -f ${USRBIN}/mpc ]]; then
+    cmd="sudo rm ${USRBIN}/mpc"
+    echo ${cmd};${cmd} 
+fi
+
+cmd="sudo ln -s ${LOCALBIN}/mpc ${USRBIN}/mpc"
+echo ${cmd};${cmd} 
+
+# End of script

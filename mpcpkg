@@ -1,0 +1,50 @@
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# $Id: mpcpkg,v 1.2 2021/12/29 07:06:36 bob Exp $
+# This package must be built under Raspbian Buster (Not Jessie or earlier)
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+Homepage: http://www.bobrathbone.com
+Standards-Version: 3.9.2
+
+Package: mpc
+Version: 0.34
+Maintainer: Bob Rathbone <bob@bobrathbone.com>
+Email-Address : bob@bobrathbone.com
+
+# Pre-Depends: <comma-separated list of packages>
+# Depends: <comma-separated list of packages>
+Depends: libsidutils0
+# Recommends: <comma-separated list of packages>
+# Suggests: <comma-separated list of packages>
+# Provides: <comma-separated list of packages>
+# Replaces: <comma-separated list of packages>
+# Architecture: all
+Architecture: armhf
+
+# Copyright: <defaults to GPL2>
+# Changelog: <changelog file; defaults to a generic changelog>
+# Readme: <README.Debian file; defaults to a generic one>
+# Extra-Files: <comma-separated list of additional files for the doc directory>
+preinst: mpc.preinst
+
+Extra-Files: README.rst
+
+# Files: <pair of space-separated paths; First is file to include, second is destination>
+Files: README.rst /usr/local/share/doc/mpd/
+    mpc /usr/local/bin/
+    AUTHORS /usr/local/share/doc/mpc
+    NEWS /usr/local/share/doc/mpc
+    README.rst /usr/local/share/doc/mpc
+    mpd-m3u-handler.sh /usr/local/share/doc/mpc/contrib
+    mpd-m3u-handler.sh /usr/local/share/doc/mpc/contrib
+    mpc-completion.bash /usr/local/share/doc/mpc/contrib
+	
+postinst: mpc.postinst
+postrm: mpc.postrm
+#  <more pairs, if there's more than one file to include. Notice the starting space>
+Description: Musica Player Daemon build
+ This package provides a later version of MPD than released with Raspberry Pi OS (Rasbian)
+ .
+
