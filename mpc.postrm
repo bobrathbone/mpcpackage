@@ -14,3 +14,5 @@ if [[ -f ${USRBIN}/mpc.old ]]; then
     cmd="sudo mv ${USRBIN}/mpc.old  ${USRBIN}/mpc"
     echo ${cmd};${cmd}
 fi
+# End of script
+

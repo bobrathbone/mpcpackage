@@ -14,3 +14,4 @@ cmd="sudo ln -s ${LOCALBIN}/mpc ${USRBIN}/mpc"
 echo ${cmd};${cmd} 
 
 # End of script
+
