@@ -9,3 +9,6 @@ if [[ ! -f ${USERBIN}/mpc.old && -f ${USERBIN}/mpc ]]; then
     cmd="sudo cp ${USERBIN}/mpc  ${USERBIN}/mpc.old"
     echo ${cmd}; ${cmd}
 fi
+
+# End of script
+
