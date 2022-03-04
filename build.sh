@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: build.sh,v 1.4 2021/12/29 14:39:01 bob Exp $
+# $Id: build.sh,v 1.5 2022/01/02 14:54:33 bob Exp $
 # Build script for packaging latest build of Music Player Daemon Client (MPC)
 # Run this script as user pi and not root
 

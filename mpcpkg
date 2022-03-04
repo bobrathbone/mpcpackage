@@ -1,6 +1,6 @@
 ### Commented entries have reasonable defaults.
 ### Uncomment to edit them.
-# $Id: mpcpkg,v 1.2 2021/12/29 07:06:36 bob Exp $
+# $Id: mpcpkg,v 1.3 2022/01/02 14:54:33 bob Exp $
 # This package must be built under Raspbian Buster (Not Jessie or earlier)
 # Source: <source package name; defaults to package name>
 Section: misc
