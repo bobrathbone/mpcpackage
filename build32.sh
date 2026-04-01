@@ -1,11 +1,12 @@
 #!/bin/bash
-# $Id: build.sh,v 1.7 2026/04/01 09:02:28 bob Exp $
+# $Id: build32.sh,v 1.2 2026/04/01 09:46:58 bob Exp $
 # Build script for packaging latest build of Music Player Daemon Client (MPC)
 # Run this script as user pi and not root
 
 # Modify package definition with version number
 # Amend this to point to the actual MPC build directory
-BUILD_DIR=/home/pi/mpc-0.35
+# OBSOLETE - use build.sh to build "all" (32 and 64-bit) architecture
+BUILD_DIR=/home/pi/mpc-0.34
 
 PKG=mpc
 PKGDEF=mpcpkg
@@ -25,6 +26,14 @@ sed -i "s/^Version:.*/Version: ${VERSION}/" ${PKGDEF}
 if [[ "$EUID" -eq 0 ]];then
         echo "Run this script as user pi and not sudo/root"
         exit 1
+fi
+
+# Check if this machine is 32-bit
+BIT=$(getconf LONG_BIT)
+if [[ ${BIT} != "32" ]]; then
+    echo "This build will only run on a 32-bit system."
+    echo "This is a ${BIT}-bit system. Use build64.sh script."
+    exit 1
 fi
 
 # Tar build for Rasbian Buster (Release 10) or later

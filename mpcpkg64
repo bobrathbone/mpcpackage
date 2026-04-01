@@ -1,8 +1,9 @@
 ### Commented entries have reasonable defaults.
 ### Uncomment to edit them.
-# $Id: mpcpkg,v 1.6 2026/04/01 09:02:29 bob Exp $
+# $Id: mpcpkg64,v 1.3 2026/04/01 09:46:58 bob Exp $
 # This package must be built under Raspbian Buster (Not Jessie or earlier)
 # Source: <source package name; defaults to package name>
+# OBSOLETE - use build.sh and mpcpkg to build "all" (32 and 64-bit) architecture
 Section: misc
 Priority: optional
 Homepage: http://www.bobrathbone.com
@@ -20,8 +21,8 @@ Depends: libsidutils0
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
 # Replaces: <comma-separated list of packages>
-# Architecture: armhf
-Architecture: all
+# Architecture: all
+Architecture: arm64
 
 # Copyright: <defaults to GPL2>
 # Changelog: <changelog file; defaults to a generic changelog>
